@@ -21,11 +21,9 @@ def partition(li, left, right):
     while left < right:
         while left < right and li[right] >= tmp:
             right -= 1
-            print(li)
         li[left] = li[right]
         while left < right and li[left] <= tmp:
             left += 1
-            print(li)
         li[right] = li[left]
     li[left] = tmp
 
@@ -41,3 +39,4 @@ def quick_sort(li, left, right):
 
 li = [1, 2, 4, 0, 2, 3, 4, 9, 5]
 quick_sort(li, 0, len(li) - 1)
+print(li)
